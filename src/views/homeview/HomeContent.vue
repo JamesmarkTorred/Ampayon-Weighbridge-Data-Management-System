@@ -6,9 +6,6 @@
         <h1 class="text-xl font-semibold text-gray-800">
           DPWH Weighbridge System
         </h1>
-        <button @click="handleLogout" class="text-gray-500 hover:text-blue-600">
-          <i class="ri-logout-box-r-line"></i>
-        </button>
       </div>
     </header>
 
