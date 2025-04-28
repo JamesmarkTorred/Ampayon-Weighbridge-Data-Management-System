@@ -1,4 +1,5 @@
 import HomeViewLayout from '@/components/HomeViewLayout.vue'
+import HomeAbout from '@/views/homeview/HomeAbout.vue'
 import HomeContent from '@/views/homeview/HomeContent.vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -18,6 +19,12 @@ const router = createRouter({
           name: 'home',
           component: HomeContent,
         },
+        {
+          path: '/about',
+          name: 'about',
+          component: HomeAbout
+        },
+
       ]
     },
 
