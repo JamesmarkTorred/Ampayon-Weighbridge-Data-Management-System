@@ -1,13 +1,24 @@
+import HomeViewLayout from '@/components/HomeViewLayout.vue'
+import HomeContent from '@/views/homeview/HomeContent.vue'
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView,
+      redirect: '/home'
+    },
+    {
+      path: '/',
+      component: HomeViewLayout,
+      children: [
+        {
+          path: '/home',
+          name: 'home',
+          component: HomeContent,
+        },
+      ]
     },
 
   ],
