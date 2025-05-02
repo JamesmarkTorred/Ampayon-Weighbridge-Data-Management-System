@@ -91,7 +91,7 @@ const handleLogout = async () => {
         <!-- Violation Tracking -->
         <li>
           <router-link
-            to="/violations"
+            to="/violation"
             class="flex items-center py-3 px-4 text-gray-300 hover:bg-gray-800 hover:text-white rounded-lg transition-all"
             :class="{ 'bg-gray-800 text-white': activeTab === 'violations' }"
             @click="setActiveTab('violations')"
