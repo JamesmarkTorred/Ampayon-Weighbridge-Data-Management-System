@@ -101,7 +101,7 @@ const handleLogout = async () => {
           </router-link>
         </li>
 
-        <!-- Reports -->
+        <!-- Reports 
         <li>
           <router-link
             to="/reports"
@@ -113,6 +113,7 @@ const handleLogout = async () => {
             <span>Reports</span>
           </router-link>
         </li>
+        -->
 
         <!-- User Management -->
         <li class="pt-2 mt-2 border-t border-gray-800">
@@ -127,7 +128,7 @@ const handleLogout = async () => {
           </router-link>
         </li>
 
-        <!-- Roles & Permissions -->
+        <!-- Roles & Permissions 
         <li>
           <router-link
             to="/roles"
@@ -138,7 +139,7 @@ const handleLogout = async () => {
             <i class="ri-shield-user-line mr-3 text-lg"></i>
             <span>Roles & Permissions</span>
           </router-link>
-        </li>
+        </li> -->
       </ul>
     </nav>
 
