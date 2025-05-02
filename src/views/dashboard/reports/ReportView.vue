@@ -1,5 +1,6 @@
 <template>
     <h1>
-        Report
+      reports
     </h1>
-</template>
+  </template>
+  
