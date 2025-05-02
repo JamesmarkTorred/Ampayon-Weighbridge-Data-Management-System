@@ -66,14 +66,7 @@
           >
             Back to Daily Logs
           </button>
-  
-          <button
-            v-if="isOwnerOrAdmin"
-            @click="editLog"
-            class="ml-4 bg-green-600 text-white px-5 py-2 rounded-lg hover:bg-green-700 transition"
-          >
-            Edit Log
-          </button>
+
         </div>
       </div>
     </div>
@@ -170,10 +163,7 @@
   const goBack = () => {
     router.push('/logs')
   }
-  
-  const editLog = () => {
-    router.push({ name: 'edit-log', params: { id } })
-  }
+
   
   onMounted(async () => {
     await checkAuth()

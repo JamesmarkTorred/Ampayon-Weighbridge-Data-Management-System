@@ -236,7 +236,7 @@ onMounted(() => {
                   scope="col"
                   class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
                 >
-                  Status
+                  Created By
                 </th>
                 <th
                   scope="col"
@@ -271,15 +271,7 @@ onMounted(() => {
                   </div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap">
-                  <span
-                    class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full"
-                    :class="{
-                      'bg-green-100 text-green-800': log.apprehended === 'no',
-                      'bg-red-100 text-red-800': log.apprehended === 'yes',
-                    }"
-                  >
-                    {{ log.apprehended === 'yes' ? 'Apprehended' : 'Compliant' }}
-                  </span>
+                  <div class="text-sm font-medium text-gray-900">{{ log.created_by }}</div>
                 </td>
                 <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                   <div class="flex justify-end space-x-2">
