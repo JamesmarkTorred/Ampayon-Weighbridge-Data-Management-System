@@ -41,7 +41,7 @@
         <router-link
           v-for="profile in profiles"
           :key="profile.id"
-          :to="`/profile/${profile.username}`"
+          :to="/showUser/${profile.username}`"
           class="profile-card p-4 border rounded-lg hover:shadow-md transition-shadow duration-200"
         >
           <div class="flex items-center space-x-4">
