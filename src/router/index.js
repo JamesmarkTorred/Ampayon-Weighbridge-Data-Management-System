@@ -19,6 +19,7 @@ import Profile from '@/views/profile/Profile.vue'
 import User from '@/views/dashboard/user/User.vue'
 import ReportView from '@/views/dashboard/reports/ReportView.vue'
 import ViolationView from '@/views/dashboard/violation/ViolationView.vue'
+import ShowUser from '@/views/dashboard/user/ShowUser.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -137,6 +138,13 @@ const router = createRouter({
           name: 'violation',
           component: ViolationView,
           meta: { requiresAuth: true},
+          props: true,
+        },
+        {
+          path: '/ShowUser',
+          name: 'show-user',
+          component: ShowUser,
+          meta: {requiresAuth: true},
           props: true,
         },
       ],

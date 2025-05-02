@@ -41,7 +41,7 @@
         <router-link
           v-for="profile in profiles"
           :key="profile.id"
-          :to="/showUser/${profile.username}`"
+          :to="`/ShowUser`"
           class="profile-card p-4 border rounded-lg hover:shadow-md transition-shadow duration-200"
         >
           <div class="flex items-center space-x-4">
@@ -164,4 +164,4 @@ onMounted(() => {
 
 <style scoped>
 
-</style>
+</style>ate>
