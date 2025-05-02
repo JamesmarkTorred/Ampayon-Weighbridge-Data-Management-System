@@ -82,7 +82,7 @@ const handleLogin = async () => {
     
     // 3. Redirect based on role with fallback
     const redirectPath = profile?.role === 'admin' ? '/admin' : '/dashboard'
-    router.push(redirectPath)
+    router.push('/dashboard')
 
   } catch (error) {
     console.error('Login error:', error)

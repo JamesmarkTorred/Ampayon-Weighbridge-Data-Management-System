@@ -9,6 +9,7 @@ const router = useRouter()
 const dailyLogs = ref([])
 const loading = ref(true)
 const successMessage = ref('')
+const isAdmin = ref(false)
 
 // UI state
 const showDeleteModal = ref(false)
@@ -38,6 +39,21 @@ const fetchLogs = async () => {
     console.error('Error fetching logs:', error)
   } finally {
     loading.value = false
+  }
+}
+
+const checkAdminStatus = async () => {
+  try {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser()
+    if (user) {
+      const { data } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+
+      isAdmin.value = data?.role === 'admin'
+    }
+  } catch (error) {
+    console.error('Error checking admin status:', error)
   }
 }
 
@@ -120,7 +136,8 @@ const nextPage = () => {
 }
 
 // Initialize
-onMounted(() => {
+onMounted(async () => {
+  await checkAdminStatus()
   fetchLogs()
 })
 </script>
@@ -290,11 +307,16 @@ onMounted(() => {
                       <i class="fas fa-pencil-alt"></i>
                     </button>
                     <button
+                      v-if="isAdmin"
                       @click="confirmDelete(log.id)"
                       class="text-red-600 hover:text-red-900 transition-colors"
                       title="Delete"
+                      :disabled="isDeleting && profileToDelete === log.id"
                     >
-                      <i class="fas fa-trash-alt"></i>
+                      <i
+                        class="fas fa-trash-alt"
+                        :class="{ 'opacity-50': isDeleting && profileToDelete === log.id }"
+                      ></i>
                     </button>
                   </div>
                 </td>

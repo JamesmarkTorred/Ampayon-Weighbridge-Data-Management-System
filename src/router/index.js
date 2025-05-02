@@ -141,7 +141,7 @@ const router = createRouter({
           props: true,
         },
         {
-          path: '/ShowUser',
+          path: '/ShowUser/:id',
           name: 'show-user',
           component: ShowUser,
           meta: {requiresAuth: true},

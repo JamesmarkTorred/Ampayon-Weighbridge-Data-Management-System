@@ -88,7 +88,7 @@ const handleLogout = async () => {
           </router-link>
         </li>
 
-        <!-- Violation Tracking -->
+        <!-- Violation Tracking 
         <li>
           <router-link
             to="/violation"
@@ -99,9 +99,9 @@ const handleLogout = async () => {
             <i class="ri-alert-line mr-3 text-lg"></i>
             <span>Violation Tracking</span>
           </router-link>
-        </li>
+        </li> -->
 
-        <!-- Reports 
+        <!-- Reports -->
         <li>
           <router-link
             to="/reports"
@@ -113,7 +113,7 @@ const handleLogout = async () => {
             <span>Reports</span>
           </router-link>
         </li>
-        -->
+        
 
         <!-- User Management -->
         <li class="pt-2 mt-2 border-t border-gray-800">
