@@ -42,12 +42,14 @@ const router = createRouter({
           name: 'about',
           component: HomeAbout,
         },
+
         {
           path: '/login',
           name: 'login',
           component: Login,
           meta: { requiresAuth: false }
         },
+
         {
           path: '/register',
           name: 'register',
